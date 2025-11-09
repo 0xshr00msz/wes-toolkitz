@@ -19,11 +19,12 @@ CSV_OUTPUT = "sqli_results.csv"
 WORKERS = 8  # number of concurrent requests when probing a single position
 
 # Helper Funnctions
+# input url here
 def is_local_hostname(url: str) -> bool:
     try:
         p = urllib.parse.urlparse(url)
         host = p.hostname
-        return host in ('https://0ae2003704812ae181bc5c31001c00d2.web-security-academy.net/')
+        return host in ('https://0abf00e904ff4dde82d6248e0098003f.web-security-academy.net/filter?category=Food+%26+Drink')
     except Exception:
         return False
 
